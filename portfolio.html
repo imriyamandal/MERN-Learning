@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riya Mandal Portfolio</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.Main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Sub1{
+    position: absolute;
+    top: 8vh;
+    left: 8vw;
+    width: 84vw;
+    height: 84vh;
+    background: rgba(255,255,255,0.92);
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.Sub2{
+    position: absolute;
+    top: 14vh;
+    left: 12vw;
+    width: 40vw;
+}
+
+h1{
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: #333;
+    margin-bottom: 8px;
+}
+
+h3{
+    color: #555;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #444;
+    line-height: 1.5;
+}
+
+/* TAGS */
+.tags span{
+    display: inline-block;
+    background: #1e3c72;
+    color: white;
+    padding: 5px 10px;
+    margin: 4px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* BUTTON */
+button{
+    margin-top: 15px;
+    width: 180px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: #1e3c72;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #2a5298;
+    transform: scale(1.05);
+}
+
+/* IMAGE BOX */
+.Sub3, .Sub4{
+    position: absolute;
+    top: 18vh;
+    right: 15vw;
+    width: 26vw;
+    height: 55vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Sub3{
+    background: linear-gradient(10deg, dodgerblue, blueviolet);
+}
+
+.Sub4{
+    background: linear-gradient(10deg, dodgerblue, blueviolet);
+    display: none;
+}
+
+img{
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    border-radius: 15px;
+}
+
+/* INFO BOX */
+.section{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.links a{
+    display: block;
+    color: #1e3c72;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+.Sub2 .tags:hover{
+    transform: scale(1.03);
+}
+.Sub3:hover, .Sub4:hover{
+    transform: scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<div class="Main">
+
+    <div class="Sub1"></div>
+
+    <div class="Sub2">
+
+        <h1 id="name">RIYA MANDAL 👩‍💻</h1>
+        <h2 id="role">B.Tech CSE (AI & Data Science - IBM)</h2>
+        <h3 id="status">Aspiring Machine Learning Engineer</h3>
+
+        <p id="about">
+            Passionate Computer Science student with strong academic performance and growing interest in AI, ML, and Data Analytics.
+        </p>
+
+        <!-- SKILLS -->
+        <div class="tags">
+            <span>Python</span>
+            <span>C/C++</span>
+            <span>Java</span>
+            <span>DSA (Basic)</span>
+            <span>Statistics</span>
+            <span>Power BI</span>
+            <span>Problem Solving</span>
+        </div>
+
+        <!-- EDUCATION / INFO -->
+        <div class="section" id="extraInfo">
+            🎓 CGPA: 9.73 (Arka Jain University)<br>
+            📍 Class 12: 80% | Class 10: 90%<br>
+            🏆 Tata Cummins Scholarship Holder
+        </div>
+
+        <!-- LINKS -->
+        <div class="links">
+            🔗 Links:<br>
+            <a href="https://www.linkedin.com/in/riya-mandal-76176435" target="_blank">LinkedIn Profile</a>
+            <a href="https://github.com/imriyamandal" target="_blank">GitHub Profile</a>
+        </div>
+
+        <button onclick="toggleContent()">Explore My Profile ↔ Reverse</button>
+
+    </div>
+
+    <div class="Sub3" id="Sub3">
+        <img src="riya.jpeg" alt="My image">
+    </div>
+
+    <div class="Sub4" id="Sub4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtp2Cy3IwX2dV5bPC433ejdxKsaA5VbDGtg&s">
+    </div>
+
+</div>
+
+<script>
+
+let toggled = false;
+
+function toggleContent(){
+
+    if(!toggled){
+
+        document.getElementById("name").innerHTML = "🚀 Future Software Engineer";
+        document.getElementById("role").innerHTML = "Intern @ NoviTech | IBM SkillsBuild Learner";
+        document.getElementById("status").innerHTML = "Focused on AI, ML & Full Stack Development";
+
+        document.getElementById("about").innerHTML =
+        "I love building real-world projects like AI tools, dashboards, and web apps. I enjoy solving problems using data and continuously improving my technical skills.";
+
+        document.getElementById("extraInfo").innerHTML =
+        "💼 Currently working on: AI Course Generator & Data Analysis Projects<br>📊 Interested in: Machine Learning, Data Science, AI Automation<br>🎯 Goal: Internship + Strong Industry Experience";
+
+        document.getElementById("Sub3").style.display = "none";
+        document.getElementById("Sub4").style.display = "block";
+
+        toggled = true;
+    }
+    else{
+
+        document.getElementById("name").innerHTML = "RIYA MANDAL 👩‍💻";
+        document.getElementById("role").innerHTML = "B.Tech CSE (AI & Data Science - IBM)";
+        document.getElementById("status").innerHTML = "Aspiring Machine Learning Engineer";
+
+        document.getElementById("about").innerHTML =
+        "Passionate Computer Science student with strong academic performance and growing interest in AI, ML, and Data Analytics.";
+
+        document.getElementById("extraInfo").innerHTML =
+        "🎓 CGPA: 9.73 (Arka Jain University)<br>📍 Class 12: 80% | Class 10: 90%<br>🏆 Tata Cummins Scholarship Holder";
+
+        document.getElementById("Sub3").style.display = "block";
+        document.getElementById("Sub4").style.display = "none";
+
+        toggled = false;
+    }
+}
+
+</script>
+
+</body>
+</html>
